@@ -25,4 +25,13 @@ mbed.bld file looks like an object file.
 
 Makefile is a special file that contains shell commands where they are executable.  Makefile is a simple way to organize code compilation.
 
+Comparing the 2 exports, many files and folders are pretty much the same.  The major difference seems to be the linker file.
+
+- Compiler - [Object code] --*
+				                       |
+- Compiler - [Object code] --* Linker file -- [Executable] -- Loader 
+				                       |					                                |
+- Compiler - [Object code] --*					                                ↓
+				                       ↓			                 [Running Executable in Memory]
+		          [Library file] --*
 
