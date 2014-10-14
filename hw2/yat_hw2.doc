@@ -1,0 +1,28 @@
+1 a) uVision
+The directory contains: .hgignore, main.cpp, mbed.bld, test.uvopt, test.uvproj + .hg and mbed folders
+test.uvopt and test.uvproj are project files.  test.uvproj contains the project structure in XML format.  This is a mandatory file that can be shared in a work-group.  test.uvopt contains the settings for the debugger, trace configuration, breakpoints, currently open files.  This is a mandatory XML file that can be shared in a work-group.
+
+mbed folder has all the .h header files used by mbed.  Under mbed folder, it has TARGET_LPC1768 subfolder that contains LPC17xx.h and other .h header files.  Under TARGET_LPC1768 has TOOLCHAIN_ARM_STD subfolder that contains .o files and a window script component called LPC1768.sct 
+
+.hg folder has one .i file and 2 other files.  
+.hgignore file sits in the working directory next to the .hg folder.  It is used to hold the content of the ignore patterns that are used for any command operating on the working directory.
+
+main.cpp is the source code file (that the Hello World code is)
+
+mbed.bld file looks like an object file.
+
+1 b) GCC ARM Embedded
+The directory contains: .hgignore, main.cpp, Makefile, mbed.bld + .hg and mbed folders
+
+mbed folder has all the .h header files used by mbed.  Under mbed folder, it has TARGET_LPC1768 subfolder that contains LPC17xx.h and other .h header files.  Under TARGET_LPC1768 has TOOLCHAIN_ARM_STD subfolder that contains .o files and a window script component called LPC1768.sct 
+
+.hg folder has one .i file and 2 other files.  
+.hgignore file sits in the working directory next to the .hg folder.  It is used to hold the content of the ignore patterns that are used for any command operating on the working directory.
+
+main.cpp is the source code file (that the Hello World code is)
+
+mbed.bld file looks like an object file.
+
+Makefile is a special file that contains shell commands where they are executable.  Makefile is a simple way to organize code compilation.
+
+
