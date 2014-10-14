@@ -1,0 +1,9 @@
+D-Link DI-514 2.4GHz Wireless Router:
+ 
+
+Components: 
+Marvel 88E6060-RCJ is a Low power, 6-port 10/100 Ethernet Switch.  This device contains PHYS, LED drivers, voltage regulator logic, switch logic and memory.  It needs a 25MHz crystal clock (which is Y1 on the board).
+Marvel 88W8500-BAN is an Access point System-On-Chip (Datasheet is not found).  But I can find on Marvell’s website news releases (dated back in 2002) that talks about this chip.  It has embedded ARM core with on-chip instruction and data cache memory.  It supports up to 256MB external SDRAM and FLASH memory.  Under the metal shield is another chip, it is Marvell 88W8000-NNC RF transceiver chip.
+Altera EPM3032-A is a programmable logic device.  It has JTAG interface with advanced pin-locking capability.
+Hynix HY57V643220CT-6 is a 4 Banks X 512K X 32-bit Synchronous DRAM.  
+Mircochip SST 39VF800A is a 512K X 16-bit CMOS multi-propose flash memory chip.  
