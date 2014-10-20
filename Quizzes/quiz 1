@@ -1,0 +1,20 @@
+quiz 1
+
+int strcmp(void *s0, void *s1);
+return true or false in the same number of time
+
+write a function that 
+1) fast (order of n) and compare
+2) secure (time = 1sec order of n)
+
+The following is 2) secure
+
+#include <string.h>
+
+int strcmp(void *s0, void *s1)
+{
+	for(; *s0 == *s1; s0++, s1++)
+		if (*s0 == 0)
+			return 0;
+	return *s0 - *s1
+}
