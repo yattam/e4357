@@ -1,10 +1,5 @@
 HW #3
-Program 14.1
- 
-The Red LED is connected to Pin 26 on mBed board.   The LED turns on/off.
- 
-Program 14.3
- 
-Two Red LEDs are connected to the mBed, one is connected to Pin 25 and one is connected to Pin 26.  In this program, a switch is connected to Pin 9 of mBed.  By default, the switch is opened, and the red LED connected to Pin 25 is ON, and the red LED connected to Pin 26 is OFF.
- 
-Next, I pressed the switch and it is closed.  The program turns on the red LED on Pin 26 and turns off the red LED on Pin 25.  
+
+I am posting my homework assignmet on my google drive.  See link below:
+
+https://docs.google.com/file/d/0B31MsdW7jauQZ1QyTkNLa2pZUUk/edit
