@@ -1,3 +1,7 @@
 This week I learned:
 
-1) The homework this week 
+1) This week's homework is to connect two mbeds as show in Figure 7.13 on the book, and compile Program Example 7.9 into each.  
+I am able to use the switches from one mbed board to control the LEDs on the other mbed board and vice versa.  The communication 
+is estabilished between pin 9 and 10 (serves as TX and RX serial communication) on both mbed boards.
+
+2) Last night in class, we went over firmware architecture and RTOS architecture.  
