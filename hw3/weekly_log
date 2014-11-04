@@ -1,0 +1,26 @@
+This week I learned:
+
+1) The homework this week is to program a GPIO port to become a Digital IO and enabling us to flahs a LED.  
+The key concept is how to program a GPIO port to become an input or an output.  The mBed code has only one line: 
+#define FIO2DIR0       (*(volatile unsigned char *)(0x2009C040)) 
+#define FIO2PIN0       (*(volatile unsigned char *)(0x2009C054))
+FIO2PIN0 |= 0x01;     // OR bit 0 with 1 to set pin high 
+			                // 1111 1111 OR 0000 0001 = 1111 1111
+FIO2PIN0 &= ~0x01;    // AND bit 0 with 0 to set pin low ~0x01 = 0x00
+			                // 1111 1111 AND 0000 0000 = 0000 0000 
+in C++ code, those 3 simple lines can be the following:
+FIO2DIR0 (Pin 26)
+// make P2.0 as GPIO (bit 3 and 2 set to 0)
+   LPC_PINCON->PINSEL4 &= ~((1 << 2)|(1 << 3));
+// set direction of P2.0
+   LPC_GPIO2->FIODIR &= ~(1 << 1); 
+   
+I dugged into the datasheet of LPC1768 and read about the GPIO portion (table 8-2).
+
+2) pyOCD: 
+pyOCD is an Open Source python 2.7 based library for programming and debugging ARM Cortex-M microcontrollers using CMSIS-DAP. 
+Linux, OSX and Windows are supported.
+You have demo it during class last week.  I woluld admit I got a bit confused in class, but after reading and sinking in more information,
+I can see how power this tool is.  It is a gdbserver running on the PC side communicating with CMSIS-DAP in an mbed board via USB link. 
+It fills the missing gap between GDB above it, and the CMSIS-DAP on the board to be debugged. As the py prefix suggests, it is written in python and hosted as an open source project in github.
+I will try to upload it to my computer and play with it.
