@@ -1,1 +1,127 @@
 HW #6
+#include <stdio.h>
+#include <stdlib.h>
+
+#ifndef __CIRCULAR_BUFFER
+#define __CIRCULAR_BUFFER
+
+/* Implement a circularbuffer library with the following API interface */
+
+/**< Circular Buffer Types */
+typedef unsigned char INT8U;
+typedef INT8U KeyType ;
+typedef struct {  
+//    INT8U writePointer ; /**< write pointer */  
+//    INT8U readPointer ;  /**< read pointer */  
+    INT8U size;         /**< size of circular buffer */
+//    INT8U mask;         /**< bit Mask of circular buffer size*/   
+    KeyType keys[0];    /**< Element of ciruclar buffer */
+
+    // my own declaration 
+//    INT8U size;         /**< size of circular buffer */
+    INT8U count;	/**< number of elements in buffer
+    INT8U start;
+    INT8U end;
+    INT8U keys[MAX_ITEMS];
+} CircularBuffer ; 
+
+inline void init(CircularBuffer *que, INT8U size)
+{
+	que->size = size;
+	que->start = 0;
+	que->end = 0;
+	que->count = 0;
+
+	int i;
+	for (i = 0; i < MAX_ITEMS; i++)
+	{
+		que->keys[i] = 0;
+	}
+	return;
+}
+
+inline int CircularBufferIsFull(CircularBuffer* que)
+{ 
+	if (que->count == que->size)
+		return 1;
+	else
+		return 0;	
+}
+
+inline int CircularBufferIsEmpty(CircularBuffer* que)
+{ 
+	if (que->count == 0)
+		return 1;
+	else
+		return 0;
+}
+inline int CircularBufferEnque(CircularBuffer* que, KeyType k) 
+{ 
+	int index;
+	if (CircularBufferIsFull(que))
+	{
+		printf("Queue is full\n");
+		printf("You cannot add items\n")
+		return -1;
+	}
+	else
+	{
+		que->count++;
+		que->key[que->end] = k
+		que->end = (que->end+1) % MAX_ITEMS;
+	}
+}
+
+inline int CircularBufferDeque(CircularBuffer* que, KeyType *pK) 
+{ 
+	if (CircularBufferIsEmpty(que)
+	{
+		printf("Queue is empty\n");
+		return -1;
+	}
+	else
+	{
+		*pk = que->keys[que->start]; 
+		que->start = (que->start+1) % MAX_ITEMS;
+		que->count--;
+		return 0;
+	}
+}
+
+inline int CircularBufferPrint(CircularBuffer* que)
+{ 
+	int aux, aux1;
+	aux = que->start;
+	aux1 = que->count;
+	while(aux1 > 0)
+	{
+		printf("Element #%d = %d\n", aux, que->keys[aux]);
+		aux = (aux + 1) % MAX_ITEMS;
+		aux1--;
+	}
+	return;
+}
+
+#endif
+
+int main(void)
+{
+	int i;
+	int readValue;
+	CircularBuffer myBuffer;
+
+	init(&myBuffer);
+
+	for (i = 0; i < MAX_ITEMS+1; i++)
+	{
+		CircularBufferEnque(&myBuffer, i);
+	}
+	CircularBufferPrint(&myBuffer);
+
+	for (i = 0; i < MAX_ITEMS/2; i++)
+	{
+		CircularBufferDeque(&myBuffer, &readValue);
+		printf("readValue = %d\n", readValue);
+	}
+	CircularBufferPrint(&myBuffer);
+}
