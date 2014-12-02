@@ -1,0 +1,23 @@
+root@yat-VirtualBox:/home/yat/ucsc/e4357fall2014/hw7/elua# ./build.sh
+[CONFIG] Found board description file at boards/known/mbed.lua
+[CONFIG] Board header file is unchanged.
+
+*********************************
+Compiling eLua ...
+CPU:            	LPC1768
+Board:          	mbed
+Platform:       	lpc17xx
+Allocator:      	multiple
+Boot Mode:      	standard
+Target:         	lua
+Toolchain:      	codesourcery
+ROMFS mode:     	verbatim
+Version:        	dev-1503850
+*********************************
+
+[PHONY] #phony:romfs
+Building ROM file system ...
+Done, total size is 1 bytes
+[builder] ./elua_lua_mbed.elf: up to date
+[builder] Done building target.
+-rwxrwx--- 1 root vboxsf 212952 Dec 2  2014 /media/sf_C_DRIVE/tmp/elua.bin
