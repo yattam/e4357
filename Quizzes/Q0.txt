@@ -14,8 +14,8 @@
 2. Search results are returned within 0.36 seconds.
 What is happening in the background?
 The key strokes fires an interrupt, IO gets the string and passes it to the google client. 
-It generates the search string according the user preferences, if there is one. 
-After the string is generated, client makes the HTTP request. 
+If there is an user's preference, it may generate the search string. 
+After the string is generated, client will make the HTTP request. 
 HTTP request converts the data to TCP/IP packets. The packets is sent to the google search engine server through the Ethernet. 
-When google servers received the request, they return the best matching indexes according to their page ranking algorithm via the same protocol. 
-If there is an encryption request, google handles it.
+When google servers received the request, they return the best matching indexes according to their page ranking algorithm. 
+If there is an encryption request, google will handle it.
