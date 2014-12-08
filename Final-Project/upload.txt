@@ -1,0 +1,4 @@
+Final Project is Portable Temperature Data Logger.  I am Group5 with Edward Ong and Emel Hizal.
+
+The pdf file is here:
+https://docs.google.com/file/d/0B31MsdW7jauQUmtESEV1dnVNMmRLOWN3SFBHcE96YmtnSE5J/edit
