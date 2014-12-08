@@ -1,4 +1,4 @@
-quiz 1
+quiz in class
 
 int strcmp(void *s0, void *s1);
 return true or false in the same number of time
